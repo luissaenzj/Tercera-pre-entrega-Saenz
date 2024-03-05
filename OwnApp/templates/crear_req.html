@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+
+ <!-- Colocamos el titulo del URL -->
+{% block titulo %}
+Realicemos el registro del requerimiento
+{% endblock %}
+
+<!-- Colocamos los comentarios de la(s) Subsecciones -->
+{% block req %}
+<p class="text-muted"> Hola Usuario en este apartado podras ingresar tu requerimiento de compra.</p>
+
+<form action="" method ="post"> {% csrf_token %}
+
+    {{formq}}
+
+    <input type="submit" value ="Guardar">
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+ <!-- Colocamos el titulo del URL -->
+{% block titulo %}
+Realicemos el registro del producto
+{% endblock %}
+
+<!-- Colocamos los comentarios de la(s) Subsecciones -->
+{% block producto %}
+<p class="text-muted"> Hola Usuario en este apartado podras registrar los productos deseados.</p>
+
+<form action="/OwnApp/crear_producto/" method ="post"> {% csrf_token %}
+
+    <p>Nombre del Producto: <input type="text" name="n_producto"></p>
+    <p>Nombre de la Categoria: <input type="text" name="n_categoria" ></p>
+    <p>Codigo del Producto: <input type="number" name="codigo" ></p>
+
+    <input type="submit" value ="Guardar">
+
+</form>
+
+{% endblock %}

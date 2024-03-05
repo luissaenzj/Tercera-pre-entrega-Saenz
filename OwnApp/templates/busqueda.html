@@ -1,0 +1,30 @@
+{% extends "padre.html" %}
+
+ <!-- Colocamos el titulo del URL -->
+{% block titulo %}
+Realicemos una Busqueda, dirigete a la parte inferior
+{% endblock %}
+
+<!-- Colocamos los comentarios de la(s) Subsecciones -->
+    {% block usuario %}
+        Realiza la busqueda de los Usuarios Creados
+
+        <form action="/OwnApp/busqueda/" method="get">
+
+            <p>
+                <input type = "text" name="nombre">
+
+                <input type="submit" value ="Buscar">
+            </p>    
+
+        </form>
+
+        <p>{{mensaje}}</p>
+        
+        {% for user in resultados %}
+
+            <p>{{user}}</p>
+        
+        {% endfor %}
+
+    {% endblock %}

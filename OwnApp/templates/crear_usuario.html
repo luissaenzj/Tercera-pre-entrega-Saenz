@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+
+ <!-- Colocamos el titulo del URL -->
+{% block titulo %}
+Realicemos el registro de usuario
+{% endblock %}
+
+<!-- Colocamos los comentarios de la(s) Subsecciones -->
+{% block usuario %}
+<p class="text-muted">Hola Usuario en este apartado podras registrarte.</p>
+
+<form action="" method ="post"> {% csrf_token %}
+
+    {{formu}}
+
+    <input type="submit" value ="Guardar">
+</form>
+{% endblock %}
